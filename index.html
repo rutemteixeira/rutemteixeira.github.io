@@ -198,23 +198,25 @@
 							<p>Feel free to reach out to discuss my projects, for future collaborations or other exciting opportunities!</p>
 							<div class="split style1">
 								<section>
-									<form method="post" action="#">
+									<form action="https://formspree.io/f/xovlbdje" method="POST">
+										<input type="hidden" name="_subject" value="New message from your portfolio!">
+										<input type="hidden" name="_replyto" value="itsrutemteixeira@gmail.com">
 										<div class="fields">
 											<div class="field half">
 												<label for="name">Name</label>
-												<input type="text" name="name" id="name" />
+												<input type="text" name="name" id="name" required>
 											</div>
 											<div class="field half">
 												<label for="email">Email</label>
-												<input type="text" name="email" id="email" />
+												<input type="email" name="email" id="email" required>
 											</div>
 											<div class="field">
 												<label for="message">Message</label>
-												<textarea name="message" id="message" rows="5"></textarea>
+												<textarea name="message" id="message" rows="5" required></textarea>
 											</div>
 										</div>
 										<ul class="actions">
-											<li><a href="" class="button submit">Send Message</a></li>
+											<li><button type="submit" class="button submit">Send Message</button></li>
 										</ul>
 									</form>
 								</section>
@@ -222,13 +224,13 @@
 									<ul class="contact">
 										<li>
 											<h3>Email</h3>
-											<a href="mailto:itsrutemteixeira@gmail.com?Subject=Hello%20Rute!">itsrutemteixeira@gmail.com</a>
+											<a href="mailto:itsrutemteixeira@gmail.com?subject=Hello%20from%20your%20portfolio">itsrutemteixeira@gmail.com</a>
 										</li>
 										<li>
 											<h3>Social</h3>
 											<ul class="icons">
-												<li><a href="https://github.com/rutemtx/" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-												<li><a href="https://www.linkedin.com/in/rutemteixeira/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+												<li><a href="https://github.com/rutemtx/" target="_blank" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+												<li><a href="https://www.linkedin.com/in/rutemteixeira/" target="_blank" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
 											</ul>
 										</li>
 									</ul>
@@ -259,6 +261,7 @@
 
 	</body>
 </html>
+
 
 
 
