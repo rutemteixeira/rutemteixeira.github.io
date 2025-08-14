@@ -1,0 +1,184 @@
+<!DOCTYPE HTML>
+<!--
+    Project Detail Page - Hyperspace Template
+-->
+<html>
+<head>
+    <title>Project Details | Rute's Portfolio</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+    <!-- ===== Favicons ===== -->
+    <link rel="icon" href="favicon_io/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
+    <link rel="mask-icon" href="favicon_io/safari-pinned-tab.svg" color="#5bbad5">
+</head>
+<body class="is-preload">
+
+    <!-- Header -->
+    <header id="header">
+        <a href="index.html" class="title">Rute's Portfolio</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Return</a></li>
+                <li><a href="generic.html" class="active">Project Details</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Main -->
+        <section id="main" class="wrapper style3 fade-up">
+            <div class="inner">
+                <h1 class="major">Project ID: Client Segmentation for Delivery Platform</h1>
+                <span class="image fit"><img src="images/pic02.jpeg" alt="Project visualization" /></span>
+                
+                <!-- Project Metadata -->
+                <div class="box alt">
+                    <div class="row gtr-uniform">
+                        <div class="col-4">
+                            <h3><span class="icon solid fa-calendar"></span> Duration</h3>
+                            <p>5 weeks (2024)</p>
+                        </div>
+                        <div class="col-4">
+                            <h3><span class="icon solid fa-industry"></span> Industry</h3>
+                            <p>Insurance / Workers' Compensation</p>
+                        </div>
+                        <div class="col-4">
+                          <h3><span class="icon solid fa-database"></span> Dataset</h3>
+                          <p>590,000+ rows, 33 columns <br> Data collected between 2020-2022</p>
+                        </div>
+
+                        <!-- Last 3 items (hidden by default) -->
+                        <div class="col-4 toggle-content" style="display: none;">
+                            <h3><span class="icon solid fa-users"></span> Collaboration</h3>
+                            <p> Team Work </p>
+                        </div>
+                        <div class="col-4 toggle-content" style="display: none;">
+                            <h3><span class="icon solid fa-cogs"></span> Skillset</h3>
+                            <p>Pandas, Python, Scikit-learn, ML Models, EDA</p>
+                        </div>
+                        <div class="col-4 toggle-content" style="display: none;">
+                            <h3><span class="icon solid fa-university"></span> Data Source</h3>
+                            <p>Public for academic purpose - NYC Workers' Compensation Bank</p>
+                        </div>
+
+                        <!-- Toggle Button -->
+                        <div class="col-12" style="text-align: center; margin-top: 10px;">
+                          <button class="toggle-button" onclick="toggleMetadata()">Show More Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Content -->
+                <h2>Project Goal</h2>
+                <p>Develop a predictive model to automate classification of injury severity claims in the workplace for NYC's Workers Compensation Bank. Complete structured pipeline involving data exploration, cleaning, preprocessing, and feature selection. Build and evaluate classification models using cross-validation, confusion matrix analysis, and derived performance metrics.</p>
+
+                <h2>Key Challenges</h2>
+                <ul>
+                    <li>Little context about Domain Knowledge</li>
+                    <li>Highly imbalanced classes</li>
+                    <li>Missing data in majority of features</li>
+                    <li>90% categorical features requiring special encoding</li>
+                </ul>
+
+                <h2>Technical Approach</h2>
+                <div class="table-wrapper">
+                    <table class="alt">
+                        <thead>
+                            <tr>
+                                <th>Phase</th>
+                                <th>Techniques</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Data Preparation</td>
+                                <td>SMOTE oversampling, Frequency Encoding</td>
+                            </tr>
+                            <tr>
+                                <td>Feature Engineering</td>
+                                <td>Time-based features, binary flags, category grouping</td>
+                            </tr>
+                            <tr>
+                                <td>Model Selection</td>
+                                <td>Light GBM with custom class weights</td>
+                            </tr>
+                            <tr>
+                                <td>Evaluation</td>
+                                <td>F1-score macro, Precision, Confusion matrix</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2>Results</h2>
+                <div class="features">
+                    <section>
+                        <span class="icon solid major fa-chart-line"></span>
+                        <h3>74% Accuracy</h3>
+                        <p>F1-Score macro of 42% on imbalanced classes</p>
+                    </section>
+                </div>
+
+                <h2 style="display: flex; align-items: center; gap: 0.5rem;">
+                  <span class="icon solid fa-lightbulb fa-sm"></span> <!-- Added fa-sm -->
+                  Key Observations and Future Improvements
+                </h2>
+                <ul>
+                  <li>First Machine Learning project</li>
+                  <li>Few predictors led to best results</li>
+                  <li>Grid search required a broader parameter range to improve the search space.</li>   
+                </ul>
+
+
+                <!-- Project Links -->
+                <ul class="actions">
+                    <li><a href="assets/documents/report_injury.pdf" class="button icon solid fa-file-pdf">Full Report</a></li>
+                    <li><a href="#" class="button icon brands fa-github">View Code</a></li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer" class="wrapper alt">
+        <div class="inner">
+            <ul class="menu">
+                <li>&copy; Rute Teixeira. All rights reserved.</li>
+                <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+      function toggleMetadata() {
+        const hiddenItems = document.querySelectorAll('.toggle-content');
+        const button = document.querySelector('.toggle-button');
+        
+        hiddenItems.forEach(item => {
+          item.style.display = (item.style.display === 'none') ? 'block' : 'none';
+        });
+        
+        button.textContent = (hiddenItems[0].style.display === 'none') 
+          ? 'Show More Details' 
+          : 'Show Less';
+      }
+    </script>
+</body>
+</html>
