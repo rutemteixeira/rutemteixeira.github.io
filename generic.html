@@ -53,19 +53,26 @@
                         </div>
                         <div class="col-4">
                           <h3><span class="icon solid fa-database"></span> Dataset</h3>
-                          <p>590,000+ claims<br>33 features- 27 categorical<br>2020-2022</p>
+                          <p>590,000+ rows, 33 columns <br> Data collected between 2020-2022</p>
                         </div>
-                        <div class="col-4">
+
+                        <!-- Last 3 items (hidden by default) -->
+                        <div class="col-4 toggle-content" style="display: none;">
                             <h3><span class="icon solid fa-users"></span> Collaboration</h3>
                             <p> Team Work </p>
                         </div>
-                        <div class="col-4">
+                        <div class="col-4 toggle-content" style="display: none;">
                             <h3><span class="icon solid fa-cogs"></span> Skillset</h3>
                             <p>Pandas, Python, Scikit-learn, ML Models, EDA</p>
                         </div>
-                        <div class="col-4">
+                        <div class="col-4 toggle-content" style="display: none;">
                             <h3><span class="icon solid fa-university"></span> Data Source</h3>
-                            <p>NYC Workers' Compensation Bank</p>
+                            <p>Public for academic purpose - NYC Workers' Compensation Bank</p>
+                        </div>
+
+                        <!-- Toggle Button -->
+                        <div class="col-12" style="text-align: center; margin-top: 10px;">
+                          <button class="toggle-button" onclick="toggleMetadata()">Show More Details</button>
                         </div>
                     </div>
                 </div>
@@ -121,11 +128,14 @@
                     </section>
                 </div>
 
-                <h2> <span class="icon solid major fa-lightbulb"></span> Key Observations and Future Improvements</h2>
+                <h2 style="display: flex; align-items: center; gap: 0.5rem;">
+                  <span class="icon solid major fa-lightbulb" style="margin-top: 0;"></span>
+                  Key Observations and Future Improvements
+                </h2>
                 <ul>
-                    <li>First Machine Learning project</li>
-                    <li>Few predictors led to best results</li>
-                    <li>Grid search required a broader parameter range to improve the search space.</li>   
+                  <li>First Machine Learning project</li>
+                  <li>Few predictors led to best results</li>
+                  <li>Grid search required a broader parameter range to improve the search space.</li>   
                 </ul>
 
 
@@ -156,6 +166,19 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
-
+    <script>
+      function toggleMetadata() {
+        const hiddenItems = document.querySelectorAll('.toggle-content');
+        const button = document.querySelector('.toggle-button');
+        
+        hiddenItems.forEach(item => {
+          item.style.display = (item.style.display === 'none') ? 'block' : 'none';
+        });
+        
+        button.textContent = (hiddenItems[0].style.display === 'none') 
+          ? 'Show More Details' 
+          : 'Show Less';
+      }
+    </script>
 </body>
 </html>
