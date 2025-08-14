@@ -47,34 +47,45 @@
             <section id="main" class="wrapper style3 fade-up">
                 <div class="inner">
                     <h1 class="major">Injury Claim Severity Classification</h1>
-                    <span class="image fit"><img src="images/pic02.jpg" alt="Project visualization" /></span>
+                    <span class="image fit"><img src="images/pic02.jpeg" alt="Project visualization" /></span>
                     
                     <!-- Project Metadata -->
                     <div class="box alt">
                         <div class="row gtr-uniform">
                             <div class="col-4">
                                 <h3><span class="icon solid fa-calendar"></span> Duration</h3>
-                                <p>3 months (2023)</p>
+                                <p>2 months (2024)</p>
                             </div>
                             <div class="col-4">
                                 <h3><span class="icon solid fa-database"></span> Dataset</h3>
-                                <p>15,000 claims, 85 features</p>
+                                <p>+590,000 claims, 33 features (27 categorical)</p>
+                                <p>Data Source: Public from NYC Workers' Compensation Bank</p>
+                                <p>Data between 2020-2022</p>
+                             </div>
+                            <div class="col-4">
+                                <h3><span class="icon solid fa-user"></span> Collaboration</h3>
+                                <p><span class="icon solid fa-lock"></span> Team Project (5) </p>
+                            </div>
+                                
                             </div>
                             <div class="col-4">
                                 <h3><span class="icon solid fa-cogs"></span> Tools</h3>
-                                <p>Python, XGBoost, Pandas</p>
+                                <p> Pandas, EDA, Python, Traditional ML Models</p>
                             </div>
                         </div>
                     </div>
 
                     <!-- Project Content -->
                     <h2>Project Goal</h2>
-                    <p>Developed a machine learning system to automate severity classification of workplace injury claims, reducing manual assessment time from 3 days to 2 hours while maintaining 87% accuracy.</p>
+                    <p>Develop a predictive model to automate classification of injury severity claims in the workplace for NYC's Workers Compensation Bank. Complete structured pipeline involving data exploration, cleaning, preprocessing, and feature selection.
+                    Build and evaluate classification models using cross-validation, confusion matrix analysis, and derived performance metrics.
+                    <p>Deliverables: full code and written report to guide the final implementation. </p>
 
                     <h2>Key Challenges</h2>
                     <ul>
-                        <li>Highly imbalanced classes (only 5% high severity cases)</li>
-                        <li>Missing data in critical injury description fields</li>
+                        <li>Little context about Domain Knowledge  </li>
+                        <li>Highly imbalanced classes </li>
+                        <li>Missing data in majority of features </li>
                         <li>90% categorical features requiring special encoding</li>
                     </ul>
 
@@ -90,37 +101,45 @@
                             <tbody>
                                 <tr>
                                     <td>Data Preparation</td>
-                                    <td>SMOTE oversampling, Target Encoding</td>
+                                    <td>SMOTE oversampling, Frequency Encoding</td>
+                                </tr>
+                                <tr>
+                                    <td>Feature Engineering</td>
+                                    <td> Introducing time-based features, created binary flags, grouped high-cardinality categories</td>
+                                </tr>
+                                <tr>
+                                    <td>Feature Selection</td>
+                                    <td>8 methods</td>
                                 </tr>
                                 <tr>
                                     <td>Model Selection</td>
-                                    <td>XGBoost with custom class weights</td>
+                                    <td>Light GBM with custom class weights</td>
                                 </tr>
                                 <tr>
                                     <td>Evaluation</td>
-                                    <td>Precision-Recall focus, SHAP analysis</td>
+                                    <td>F1-score macro, Precision, Confusion matrix</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
 
-                    <h2>Results & Impact</h2>
+                    <h2>Results</h2>
                     <div class="features">
                         <section>
                             <span class="icon solid major fa-chart-line"></span>
-                            <h3>87% Accuracy</h3>
-                            <p>Outperformed manual assessment consistency by 22%</p>
-                        </section>
-                        <section>
-                            <span class="icon solid major fa-clock"></span>
-                            <h3>52% Faster</h3>
-                            <p>Reduced processing time from 72hrs to 2hrs</p>
+                            <h3>74% Accuracy, F1-Score macro of 42% </h3>
                         </section>
                     </div>
 
+                    <h2>Observations and Future Improvements</h2>
+                    <ul>
+                        <li>First project and contact to Machine Learning</li>
+                        <li>Grid search required broader parameters for improved search space</li>
+                    </ul>
+
                     <!-- Project Links -->
                     <ul class="actions">
-                        <li><a href="#" class="button icon solid fa-file-pdf">Full Report</a></li>
+                        <li><a href="assets/documents/report_injury.pdf" class="button icon solid fa-file-pdf">Full Report</a></li>
                         <li><a href="#" class="button icon brands fa-github">View Code</a></li>
                     </ul>
                 </div>
