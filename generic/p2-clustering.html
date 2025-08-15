@@ -56,11 +56,11 @@
                         </div>
                         <div class="col-4">
                             <h3><span class="icon solid fa-industry"></span> Industry</h3>
-                            <p>Insurance / Workers' Compensation</p>
+                            <p>B2C - Food and Beverage (e-commerce) </p>
                         </div>
                         <div class="col-4">
                           <h3><span class="icon solid fa-database"></span> Dataset</h3>
-                          <p>590,000+ rows, 33 columns <br> Data collected between 2020-2022</p>
+                          <p>30,000+ rows, 52 columns <br> 3 months of purchase history </p>
                         </div>
 
                         <!-- Last 3 items (hidden by default) -->
@@ -70,11 +70,11 @@
                         </div>
                         <div class="col-4 toggle-content" style="display: none;">
                             <h3><span class="icon solid fa-cogs"></span> Skillset</h3>
-                            <p>Pandas, Python, Scikit-learn, ML Models, EDA</p>
+                            <p>Pandas, Python, Scikit-learn, Clustering Alorithms, RFM Analsis, EDA</p>
                         </div>
                         <div class="col-4 toggle-content" style="display: none;">
                             <h3><span class="icon solid fa-university"></span> Data Source</h3>
-                            <p>Public for academic purpose - NYC Workers' Compensation Bank</p>
+                            <p>Public </p>
                         </div>
 
                         <!-- Toggle Button -->
@@ -85,15 +85,14 @@
                 </div>
 
                 <!-- Project Content -->
-                <h2>Project Goal</h2>
-                <p>Develop a predictive model to automate classification of injury severity claims in the workplace for NYC's Workers Compensation Bank. Complete structured pipeline involving data exploration, cleaning, preprocessing, and feature selection. Build and evaluate classification models using cross-validation, confusion matrix analysis, and derived performance metrics.</p>
+                <h2>Project Scope</h2>
+                <p>Customer segmentation for a B2C food delivery platform, analyzing both behavior (ordering patterns, purchase frequency) and preferences (cuisine types, spending habits) to develop hyper-targeted marketing strategies, incorporating at least two distinct segmentation perspectives.</p>
 
                 <h2>Key Challenges</h2>
                 <ul>
-                    <li>Little context about Domain Knowledge</li>
-                    <li>Highly imbalanced classes</li>
-                    <li>Missing data in majority of features</li>
-                    <li>90% categorical features requiring special encoding</li>
+                    <li>Data Skewness and outliers required log transformations and iterative outlier removal</li>
+                    <li>Cluster interpretability</li>
+                    <li>Model selection balancing all tradeoffs</li>
                 </ul>
 
                 <h2>Technical Approach</h2>
@@ -108,19 +107,19 @@
                         <tbody>
                             <tr>
                                 <td>Data Preparation</td>
-                                <td>SMOTE oversampling, Frequency Encoding</td>
+                                <td>KNN imputation, log transformation</td>
                             </tr>
                             <tr>
                                 <td>Feature Engineering</td>
-                                <td>Time-based features, binary flags, category grouping</td>
+                                <td>RFM metrics, time-based bins, aggregations of data</td>
                             </tr>
                             <tr>
                                 <td>Model Selection</td>
-                                <td>Light GBM with custom class weights</td>
+                                <td>Self-Organizing Maps (SOM's) merged with Hierarchical Clustering</td>
                             </tr>
                             <tr>
                                 <td>Evaluation</td>
-                                <td>F1-score macro, Precision, Confusion matrix</td>
+                                <td>R-Squared, Silhouette/Inertia, AIC/BIC, t-SNE visualziations </td>
                             </tr>
                         </tbody>
                     </table>
@@ -130,8 +129,8 @@
                 <div class="features">
                     <section>
                         <span class="icon solid major fa-chart-line"></span>
-                        <h3>74% Accuracy</h3>
-                        <p>F1-Score macro of 42% on imbalanced classes</p>
+                        <h3>~94% R-Squared</h3>
+                        <p>Very close to 1, the predictors explain very well the variance in the dependent variable</p>
                     </section>
                 </div>
 
@@ -140,9 +139,7 @@
                   Key Observations and Future Improvements
                 </h2>
                 <ul>
-                  <li>First Machine Learning project</li>
-                  <li>Few predictors led to best results</li>
-                  <li>Grid search required a broader parameter range to improve the search space.</li>   
+                  <li> Correctly identifying duplicates requires a good understanding of how customer are registered on database </li>   
                 </ul>
 
 
