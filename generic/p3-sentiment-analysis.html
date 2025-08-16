@@ -33,7 +33,7 @@
         <nav>
             <ul>
                 <li><a href="index.html">Return</a></li>
-                <li><a href="generic/p1-injury-claim.html" class="active">Project Details</a></li>
+                <li><a href="generic/p3-sentiment-analysis.html" class="active">Project Details</a></li>
             </ul>
         </nav>
     </header>
@@ -44,7 +44,7 @@
         <!-- Main -->
         <section id="main" class="wrapper style3 fade-up">
             <div class="inner">
-                <h1 class="major">Project ID: Injury Claim Severity Classification</h1>
+                <h1 class="major">Project ID: Sentiment Analysis on Tweets</h1>
                 <span class="image fit"><img src="images/pic01.jpg" alt="Project visualization" /></span>
                 
                 <!-- Project Metadata -->
@@ -52,15 +52,15 @@
                     <div class="row gtr-uniform">
                         <div class="col-4">
                             <h3><span class="icon solid fa-calendar"></span> Duration</h3>
-                            <p>2 months (2024)</p>
+                            <p>1 month (2024)</p>
                         </div>
                         <div class="col-4">
                             <h3><span class="icon solid fa-industry"></span> Industry</h3>
-                            <p>Insurance / Workers' Compensation</p>
+                            <p>Financial Markets / Technology</p>
                         </div>
                         <div class="col-4">
                           <h3><span class="icon solid fa-database"></span> Dataset</h3>
-                          <p>590,000+ rows, 33 columns <br> Data collected between 2020-2022</p>
+                          <p>9,000+ labeled training tweets + 2,000+ unlabeled test tweets</p>
                         </div>
 
                         <!-- Last 3 items (hidden by default) -->
@@ -70,11 +70,11 @@
                         </div>
                         <div class="col-4 toggle-content" style="display: none;">
                             <h3><span class="icon solid fa-cogs"></span> Skillset</h3>
-                            <p>Pandas, Python, Scikit-learn, ML Models, EDA</p>
+                            <p>Tensorflow/Keras, Hugging Face, Text Preprocessing, Transformers, NLTK/VADER</p>
                         </div>
                         <div class="col-4 toggle-content" style="display: none;">
                             <h3><span class="icon solid fa-university"></span> Data Source</h3>
-                            <p>Public for academic purpose - NYC Workers' Compensation Bank</p>
+                            <p>Public - Twitter</p>
                         </div>
 
                         <!-- Toggle Button -->
@@ -85,15 +85,14 @@
                 </div>
 
                 <!-- Project Content -->
-                <h2>Project Goal</h2>
-                <p>Develop a predictive model to automate classification of injury severity claims in the workplace for NYC's Workers Compensation Bank. Complete structured pipeline involving data exploration, cleaning, preprocessing, and feature selection. Build and evaluate classification models using cross-validation, confusion matrix analysis, and derived performance metrics.</p>
+                <h2>Project Scope</h2>
+                <p> Classify financial tweets into bullish, bearish, or neutral sentiments using NLP techniques. For the classification task, we assesed traditional ML modes, deep learning (LSTM) and transformer models (DistilBERT, GPT-2, FinBERT). The workflow included data exploration, preprocessing (tokenization, cleaning) and model evaluation.</p>
 
                 <h2>Key Challenges</h2>
                 <ul>
-                    <li>Little context about Domain Knowledge</li>
-                    <li>Highly imbalanced classes</li>
-                    <li>Missing data in majority of features</li>
-                    <li>90% categorical features requiring special encoding</li>
+                    <li>Handling unstructured and noisy text data</li>
+                    <li>Highly imbalanced classes - neutral tweets dominated, requiring class weighting to avoid bias</li>
+                    <li>Designing preprocessing pipelines tailored to the strengths and limitations of each model family</li>
                 </ul>
 
                 <h2>Technical Approach</h2>
@@ -108,15 +107,15 @@
                         <tbody>
                             <tr>
                                 <td>Data Preparation</td>
-                                <td>SMOTE oversampling, Frequency Encoding</td>
+                                <td>Lowercasing, URL/ticker removal, stopword filtering (retaining negations), emoji extraction, stemming/lemmatization</td>
                             </tr>
                             <tr>
                                 <td>Feature Engineering</td>
-                                <td>Time-based features, binary flags, category grouping</td>
+                                <td>Bag-of-Words and TF-IDF vectorization</td>
                             </tr>
                             <tr>
                                 <td>Model Selection</td>
-                                <td>Light GBM with custom class weights</td>
+                                <td>DistilBERT</td>
                             </tr>
                             <tr>
                                 <td>Evaluation</td>
@@ -130,8 +129,8 @@
                 <div class="features">
                     <section>
                         <span class="icon solid major fa-chart-line"></span>
-                        <h3>74% Accuracy</h3>
-                        <p>F1-Score macro of 42% on imbalanced classes</p>
+                        <h3>87% Accuracy</h3>
+                        <p>F1-Score macro of 83%</p>
                     </section>
                 </div>
 
@@ -140,9 +139,9 @@
                   Key Observations and Future Improvements
                 </h2>
                 <ul>
-                  <li>First Machine Learning project</li>
-                  <li>Few predictors led to best results</li>
-                  <li>Grid search required a broader parameter range to improve the search space.</li>   
+                  <li>Adopting the latest GPT model version and fine-tuning it for domain-specific data</li>
+                  <li>Training FinBERT on the dataset instead of relying solely on pre-trained weights</li>
+                  <li>Applying grid search (or other optimization techniques) to identify optimal hyperparameters for the best-performing model.</li>   
                 </ul>
 
 
