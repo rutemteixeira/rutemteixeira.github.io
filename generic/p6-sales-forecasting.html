@@ -56,11 +56,11 @@
                         </div>
                         <div class="col-4">
                             <h3><span class="icon solid fa-industry"></span> Industry</h3>
-                            <p>Insurance / Workers' Compensation</p>
+                            <p>Industrial Manufacturing / Technology </p>
                         </div>
                         <div class="col-4">
                           <h3><span class="icon solid fa-database"></span> Dataset</h3>
-                          <p>590,000+ rows, 33 columns <br> Data collected between 2020-2022</p>
+                          <p>Sales Data: 602 daily records, 2 columns - Collected Oct 2018 - Apr 2022 <br> Market Data: 219 monthly records, 48 macroeconomic indicators</p>
                         </div>
 
                         <!-- Last 3 items (hidden by default) -->
@@ -70,11 +70,11 @@
                         </div>
                         <div class="col-4 toggle-content" style="display: none;">
                             <h3><span class="icon solid fa-cogs"></span> Skillset</h3>
-                            <p>Pandas, Python, Scikit-learn, ML Models, EDA</p>
+                            <p>Python, LSTM, Neural Phophet, Time-series analysis, lag correlation analysis,  model ensembling</p>
                         </div>
                         <div class="col-4 toggle-content" style="display: none;">
                             <h3><span class="icon solid fa-university"></span> Data Source</h3>
-                            <p>Public for academic purpose - NYC Workers' Compensation Bank</p>
+                            <p>Internal (Siemens) and external macroeconomic data from FRED, Investing.com, and the People’s Bank of China</p>
                         </div>
 
                         <!-- Toggle Button -->
@@ -86,14 +86,14 @@
 
                 <!-- Project Content -->
                 <h2>Project Scope</h2>
-                <p>Develop a predictive model to automate classification of injury severity claims in the workplace for NYC's Workers Compensation Bank. Complete structured pipeline involving data exploration, cleaning, preprocessing, and feature selection. Build and evaluate classification models using cross-validation, confusion matrix analysis, and derived performance metrics.</p>
+                <p>Develop an AI-driven sales forecasting model for Siemens' Smart Infrastructure Division in Germany to predict monthly sales (aggregated by product group) over a 10-month horizon. The solution integrated internal sales history with external macroeconomic indicators to move beyond manual, biased forecasting methods. The goal was to enhance accuracy, optimize resource allocation, and provide a scalable, data-driven framework for strategic decision-making.</p>
 
                 <h2>Key Challenges</h2>
                 <ul>
-                    <li>Little context about Domain Knowledge</li>
-                    <li>Highly imbalanced classes</li>
-                    <li>Missing data in majority of features</li>
-                    <li>90% categorical features requiring special encoding</li>
+                    <li>Little context provided by the client, lack of clarity in data forced us to assumptions</li>
+                    <li>Merging and cleaning disparate datasets with complex missing value patterns </li>
+                    <li>Identifying the optimal lag (time delay) for each macroeconomic indicator's effect on sales for each product group</li>
+                    <li> Building a robust model that can perform accurately and generalize well throught different product groups and sales patterns</li>
                 </ul>
 
                 <h2>Technical Approach</h2>
@@ -108,19 +108,19 @@
                         <tbody>
                             <tr>
                                 <td>Data Preparation</td>
-                                <td>SMOTE oversampling, Frequency Encoding</td>
+                                <td>Advanced missing value imputation (Polynomial Regression, proxy variables), datetime formatting, monthly aggregation</td>
                             </tr>
                             <tr>
                                 <td>Feature Engineering</td>
-                                <td>Time-based features, binary flags, category grouping</td>
+                                <td>Holiday count feature engineering, Exhaustive Lag Analysis, Incorporation of external data</td>
                             </tr>
                             <tr>
                                 <td>Model Selection</td>
-                                <td>Light GBM with custom class weights</td>
+                                <td>Ensemble Model: Neural Prophet (for seasonality/trends) and LSTM (for complex temporal dependencies)</td>
                             </tr>
                             <tr>
                                 <td>Evaluation</td>
-                                <td>F1-score macro, Precision, Confusion matrix</td>
+                                <td> Root Mean Squared Error (RMSE), Visual analysis (actual vs. predicted plots)</td>
                             </tr>
                         </tbody>
                     </table>
@@ -130,8 +130,9 @@
                 <div class="features">
                     <section>
                         <span class="icon solid major fa-chart-line"></span>
-                        <h3>74% Accuracy</h3>
-                        <p>F1-Score macro of 42% on imbalanced classes</p>
+                        <h3>0.1743 Average RMSE</h3>
+                        <p>Significant variation per product group, going as low as 0.02 to 0.32.</p>
+                        <p>Closer to 0 means the model makes more accurate predictions</p>
                     </section>
                 </div>
 
@@ -140,15 +141,13 @@
                   Key Observations and Future Improvements
                 </h2>
                 <ul>
-                  <li>First Machine Learning project</li>
-                  <li>Few predictors led to best results</li>
-                  <li>Grid search required a broader parameter range to improve the search space.</li>   
+                  <li>Seasonality is confirmed and detected by data analysis</li> 
                 </ul>
 
 
                 <!-- Project Links -->
                 <ul class="actions">
-                    <li><a href="assets/documents/report_injury.pdf" class="button icon solid fa-file-pdf">Full Report</a></li>
+                    <li><a href="assets/documents/report_forecasting.pdf" class="button icon solid fa-file-pdf">Full Report</a></li>
                     <li><a href="#" class="button icon brands fa-github">View Code</a></li>
                 </ul>
             </div>
