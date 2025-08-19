@@ -1,0 +1,22 @@
+/* White background with electric blue and lime green theme */
+body {
+  background: #ffffff;
+}
+
+body, input, select, textarea {
+  color: #333333;
+}
+
+strong, b, h1, h2, h3, h4, h5, h6 {
+  color: #222222;
+}
+
+a {
+  border-bottom-color: rgba(0, 162, 255, 0.5);
+}
+
+a:hover {
+  color: #00a2ff;
+}
+
+/* Add all the other overrides from above */
