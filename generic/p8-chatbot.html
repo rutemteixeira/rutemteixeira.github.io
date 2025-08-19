@@ -33,7 +33,7 @@
         <nav>
             <ul>
                 <li><a href="index.html">Return</a></li>
-                <li><a href="generic/p1-injury-claim.html" class="active">Project Details</a></li>
+                <li><a href="generic/p8-chatbot.html" class="active">Project Details</a></li>
             </ul>
         </nav>
     </header>
@@ -44,23 +44,23 @@
         <!-- Main -->
         <section id="main" class="wrapper style3 fade-up">
             <div class="inner">
-                <h1 class="major">Project ID: Injury Claim Severity Classification</h1>
-                <span class="image fit"><img src="images/pic01.jpg" alt="Project visualization" /></span>
+                <h1 class="major">Project ID: AI-powered Chatbot to support commercial agents</h1>
+                <span class="image fit"><img src="images/pic08.png" alt="Project visualization" /></span>
                 
                 <!-- Project Metadata -->
                 <div class="box alt">
                     <div class="row gtr-uniform">
                         <div class="col-4">
                             <h3><span class="icon solid fa-calendar"></span> Duration</h3>
-                            <p>2 months (2024)</p>
+                            <p>3 weeks (2025)</p>
                         </div>
                         <div class="col-4">
                             <h3><span class="icon solid fa-industry"></span> Industry</h3>
-                            <p>Insurance / Workers' Compensation</p>
+                            <p>Insurance / Financial Services </p>
                         </div>
                         <div class="col-4">
-                          <h3><span class="icon solid fa-database"></span> Dataset</h3>
-                          <p>590,000+ rows, 33 columns <br> Data collected between 2020-2022</p>
+                          <h3><span class="icon solid fa-database"></span> Corpora</h3>
+                          <p>21 unstructured pdf documents provided by client</p>
                         </div>
 
                         <!-- Last 3 items (hidden by default) -->
@@ -70,11 +70,11 @@
                         </div>
                         <div class="col-4 toggle-content" style="display: none;">
                             <h3><span class="icon solid fa-cogs"></span> Skillset</h3>
-                            <p>Pandas, Python, Scikit-learn, ML Models, EDA</p>
+                            <p>Python, Retrieval-Augmented Generation (RAG), GenAI, Open AI API, Prompt Engineering, Text Preprocessing, Streamlit</p>
                         </div>
                         <div class="col-4 toggle-content" style="display: none;">
                             <h3><span class="icon solid fa-university"></span> Data Source</h3>
-                            <p>Public for academic purpose - NYC Workers' Compensation Bank</p>
+                            <p> Internal from Fidelidade</p>
                         </div>
 
                         <!-- Toggle Button -->
@@ -86,14 +86,14 @@
 
                 <!-- Project Content -->
                 <h2>Project Scope</h2>
-                <p>Develop a predictive model to automate classification of injury severity claims in the workplace for NYC's Workers Compensation Bank. Complete structured pipeline involving data exploration, cleaning, preprocessing, and feature selection. Build and evaluate classification models using cross-validation, confusion matrix analysis, and derived performance metrics.</p>
+                <p>This project aimed to develop "Assistente Fidélia," an AI-powered chatbot to support Fidelidade's insurance agents by providing instant, accurate answers to complex product questions. The solution tackles low financial literacy among customers by offloading explanatory tasks from agents, allowing them to focus on high-value sales and relationship building. The chatbot uses a RAG architecture grounded in official PDF documentation to ensure compliant, precise responses and features a user-friendly Streamlit interface with voice input and multi-language support.</p>
 
                 <h2>Key Challenges</h2>
                 <ul>
-                    <li>Little context about Domain Knowledge</li>
-                    <li>Highly imbalanced classes</li>
-                    <li>Missing data in majority of features</li>
-                    <li>90% categorical features requiring special encoding</li>
+                    <li>Limited ability to tune the closed-source model, since it cannot be retrained.</li>
+                    <li>Designing and implementing features to the interface that maximize usability and provide added value</li>
+                    <li>Restricting the chatbot to relevant information while still enabling it to answer questions outside the knowledge base</li>
+                    <li>nsuring the chatbot provides helpful, accurate answers strictly based on provided documents while gracefully handling out-of-scope queries to avoid "hallucination" in a regulated industry.</li>
                 </ul>
 
                 <h2>Technical Approach</h2>
@@ -108,19 +108,19 @@
                         <tbody>
                             <tr>
                                 <td>Data Preparation</td>
-                                <td>SMOTE oversampling, Frequency Encoding</td>
+                                <td> Text and Image Extraction, Cleaning, Chunking. API Client Setup. RAG Framework</td>
                             </tr>
                             <tr>
                                 <td>Feature Engineering</td>
-                                <td>Time-based features, binary flags, category grouping</td>
+                                <td>Tokenization. Building a searchable index (FAISS) for real-time semantic search</td>
                             </tr>
                             <tr>
                                 <td>Model Selection</td>
-                                <td>Light GBM with custom class weights</td>
+                                <td>GPT-4-o-mini within a RAG pipeline</td>
                             </tr>
                             <tr>
                                 <td>Evaluation</td>
-                                <td>F1-score macro, Precision, Confusion matrix</td>
+                                <td>Cosine similarity, Manual Qualitative Evaluation</td>
                             </tr>
                         </tbody>
                     </table>
@@ -130,8 +130,12 @@
                 <div class="features">
                     <section>
                         <span class="icon solid major fa-chart-line"></span>
-                        <h3>74% Accuracy</h3>
-                        <p>F1-Score macro of 42% on imbalanced classes</p>
+                        <h3>83-95% Cosine Similarity</h3>
+                    </section>
+                    <section>
+                        <span class="icon solid major fa-money-bill"></span>
+                        <h3>1.5M€ net savings</h3>
+                        <p>Considering a conservative proection of 15min saved per agent in the network</p>
                     </section>
                 </div>
 
@@ -140,15 +144,16 @@
                   Key Observations and Future Improvements
                 </h2>
                 <ul>
-                  <li>First Machine Learning project</li>
-                  <li>Few predictors led to best results</li>
-                  <li>Grid search required a broader parameter range to improve the search space.</li>   
+                  <li>The solution was also developed for integration via telegram, or other hosted platforms via Business API</li>
+                  <li>Introduce user satisfaction evaluation after each response and store results in dataset for future analysis</li>
+                  <li>More language quality metrics could have been introduced for evaluation</li>
+                  <li>Document reference system could be introduced to prioritize most recent information over older as knowledge base increases</li>   
                 </ul>
 
 
                 <!-- Project Links -->
                 <ul class="actions">
-                    <li><a href="assets/documents/report_injury.pdf" class="button icon solid fa-file-pdf">Full Report</a></li>
+                    <li><a href="documents/report_chatbot.pdf" class="button icon solid fa-file-pdf">Full Report</a></li>
                     <li><a href="#" class="button icon brands fa-github">View Code</a></li>
                 </ul>
             </div>
