@@ -122,20 +122,21 @@
 
                 <h2>Results</h2>
                 <div class="features">
-                    <ul> <!-- Corrected Structure: Using a list -->
-                        <li class="metric"> <!-- List item for each metric -->
-                            <span class="icon solid major fa-chart-line"></span>
-                            <h3>Average patient satisfaction score: 3.59 / 5</h3>
-                        </li>
-                        <li class="metric">
-                            <span class="icon solid major fa-clock"></span>
-                            <h3>Average throughput time: 9 minutes</h3>
-                        </li>
-                        <li class="metric">
-                            <span class="icon solid major fa-thumbs-down"></span> <!-- Fixed class -->
-                            <h3>Complaint rate: 16% of cases</h3>
-                        </li>
-                    </ul>
+                    <section> <!-- Each metric in its own section -->
+                        <span class="icon solid major fa-chart-line"></span>
+                        <h3>3.59 / 5</h3>
+                        <p>Average patient satisfaction score</p>
+                    </section>
+                    <section>
+                        <span class="icon solid major fa-clock"></span>
+                        <h3>9 minutes</h3>
+                        <p>Average throughput time</p>
+                    </section>
+                    <section>
+                        <span class="icon solid major fa-thumbs-down"></span>
+                        <h3>16% of cases</h3>
+                        <p>Complaint rate</p>
+                    </section>
                 </div>
 
                 <h2 style="display: flex; align-items: center; gap: 0.5rem;">
