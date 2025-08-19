@@ -33,7 +33,7 @@
         <nav>
             <ul>
                 <li><a href="index.html">Return</a></li>
-                <li><a href="generic/p1-injury-claim.html" class="active">Project Details</a></li>
+                <li><a href="generic/p5-hotel-strategy.html" class="active">Project Details</a></li>
             </ul>
         </nav>
     </header>
@@ -45,22 +45,22 @@
         <section id="main" class="wrapper style3 fade-up">
             <div class="inner">
                 <h1 class="major">Project ID: Injury Claim Severity Classification</h1>
-                <span class="image fit"><img src="images/pic01.jpg" alt="Project visualization" /></span>
+                <span class="image fit"><img src="images/pic05.jpg" alt="Project visualization" /></span>
                 
                 <!-- Project Metadata -->
                 <div class="box alt">
                     <div class="row gtr-uniform">
                         <div class="col-4">
                             <h3><span class="icon solid fa-calendar"></span> Duration</h3>
-                            <p>2 months (2024)</p>
+                            <p>3 weeks (2025)</p>
                         </div>
                         <div class="col-4">
                             <h3><span class="icon solid fa-industry"></span> Industry</h3>
-                            <p>Insurance / Workers' Compensation</p>
+                            <p>Hospitality</p>
                         </div>
                         <div class="col-4">
                           <h3><span class="icon solid fa-database"></span> Dataset</h3>
-                          <p>590,000+ rows, 33 columns <br> Data collected between 2020-2022</p>
+                          <p>111,000+ rows, 29 columns <br>98,000 unique customers</p>
                         </div>
 
                         <!-- Last 3 items (hidden by default) -->
@@ -70,11 +70,11 @@
                         </div>
                         <div class="col-4 toggle-content" style="display: none;">
                             <h3><span class="icon solid fa-cogs"></span> Skillset</h3>
-                            <p>Pandas, Python, Scikit-learn, ML Models, EDA</p>
+                            <p>Pandas, Python, CRISP/DM, K-Means, Decision Trees, Statistical methods, EDA</p>
                         </div>
                         <div class="col-4 toggle-content" style="display: none;">
                             <h3><span class="icon solid fa-university"></span> Data Source</h3>
-                            <p>Public for academic purpose - NYC Workers' Compensation Bank</p>
+                            <p>Internal, supplemented by external market data from Portugal’s National Statistical Institution (INE)</p>
                         </div>
 
                         <!-- Toggle Button -->
@@ -86,14 +86,13 @@
 
                 <!-- Project Content -->
                 <h2>Project Scope</h2>
-                <p>Develop a predictive model to automate classification of injury severity claims in the workplace for NYC's Workers Compensation Bank. Complete structured pipeline involving data exploration, cleaning, preprocessing, and feature selection. Build and evaluate classification models using cross-validation, confusion matrix analysis, and derived performance metrics.</p>
+                <p>Develop a sophisticated customer segmentation strategy for Hotel H by targeting marketing based on geographic, demographic, and behavioral characteristics. The goal was to identify distinct customer clusters based on their booking patterns, spending habits, reliability, and proceed to outline marketing profiles for each of those clusters</p>
 
                 <h2>Key Challenges</h2>
                 <ul>
-                    <li>Little context about Domain Knowledge</li>
-                    <li>Highly imbalanced classes</li>
-                    <li>Missing data in majority of features</li>
-                    <li>90% categorical features requiring special encoding</li>
+                    <li>Lack of critical context (e.g., hotel capacity, star rating, time-series data for seasonality) which required significant assumptions</li>
+                    <li>Creating meaningful derived features that correctly capture the underlying relationships between existing data</li>
+                    <li>Algorithm selection considering tradeoffs</li>
                 </ul>
 
                 <h2>Technical Approach</h2>
@@ -108,19 +107,19 @@
                         <tbody>
                             <tr>
                                 <td>Data Preparation</td>
-                                <td>SMOTE oversampling, Frequency Encoding</td>
+                                <td>Standard EDA procedures</td>
                             </tr>
                             <tr>
                                 <td>Feature Engineering</td>
-                                <td>Time-based features, binary flags, category grouping</td>
+                                <td>9 new features</td>
                             </tr>
                             <tr>
                                 <td>Model Selection</td>
-                                <td>Light GBM with custom class weights</td>
+                                <td>K-Means</td>
                             </tr>
                             <tr>
                                 <td>Evaluation</td>
-                                <td>F1-score macro, Precision, Confusion matrix</td>
+                                <td>Silhouette Score, Elbow Method</td>
                             </tr>
                         </tbody>
                     </table>
@@ -140,15 +139,15 @@
                   Key Observations and Future Improvements
                 </h2>
                 <ul>
-                  <li>First Machine Learning project</li>
-                  <li>Few predictors led to best results</li>
-                  <li>Grid search required a broader parameter range to improve the search space.</li>   
+                  <li>Clear trade-off between booking lead time and customer value</li>
+                  <li>Start collecting crucial missing KPIs like guest satisfaction and promotion usage.</li>
+                  <li>Incorporate Time-Series Data to capture seasonality and trends</li>   
                 </ul>
 
 
                 <!-- Project Links -->
                 <ul class="actions">
-                    <li><a href="assets/documents/report_injury.pdf" class="button icon solid fa-file-pdf">Full Report</a></li>
+                    <li><a href="assets/documents/report_hotel.pdf" class="button icon solid fa-file-pdf">Full Report</a></li>
                     <li><a href="#" class="button icon brands fa-github">View Code</a></li>
                 </ul>
             </div>
