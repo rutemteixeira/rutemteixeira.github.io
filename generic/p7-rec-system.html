@@ -33,7 +33,7 @@
         <nav>
             <ul>
                 <li><a href="index.html">Return</a></li>
-                <li><a href="generic/p1-injury-claim.html" class="active">Project Details</a></li>
+                <li><a href="generic/p7-rec-system.html" class="active">Project Details</a></li>
             </ul>
         </nav>
     </header>
@@ -44,23 +44,23 @@
         <!-- Main -->
         <section id="main" class="wrapper style3 fade-up">
             <div class="inner">
-                <h1 class="major">Project ID: Injury Claim Severity Classification</h1>
-                <span class="image fit"><img src="images/pic01.jpg" alt="Project visualization" /></span>
+                <h1 class="major">Project ID: Recommendation System for B2B platform</h1>
+                <span class="image fit"><img src="images/pic07.jpg" alt="Project visualization" /></span>
                 
                 <!-- Project Metadata -->
                 <div class="box alt">
                     <div class="row gtr-uniform">
                         <div class="col-4">
                             <h3><span class="icon solid fa-calendar"></span> Duration</h3>
-                            <p>2 months (2024)</p>
+                            <p>3 weeks (2025)</p>
                         </div>
                         <div class="col-4">
                             <h3><span class="icon solid fa-industry"></span> Industry</h3>
-                            <p>Insurance / Workers' Compensation</p>
+                            <p> Retail, Wholesale Cash&Carry  / B2B platform</p>
                         </div>
                         <div class="col-4">
                           <h3><span class="icon solid fa-database"></span> Dataset</h3>
-                          <p>590,000+ rows, 33 columns <br> Data collected between 2020-2022</p>
+                          <p>Clients: 6,400+ rows, 4 columns <br>Products: 4,500+ rows, 3 columns<br> Transactions: 884,000+ rows, 3 columns</p>
                         </div>
 
                         <!-- Last 3 items (hidden by default) -->
@@ -70,11 +70,11 @@
                         </div>
                         <div class="col-4 toggle-content" style="display: none;">
                             <h3><span class="icon solid fa-cogs"></span> Skillset</h3>
-                            <p>Pandas, Python, Scikit-learn, ML Models, EDA</p>
+                            <p>Python, RapidFuzz, Dice Similarity, Monte carlo simulation</p>
                         </div>
                         <div class="col-4 toggle-content" style="display: none;">
                             <h3><span class="icon solid fa-university"></span> Data Source</h3>
-                            <p>Public for academic purpose - NYC Workers' Compensation Bank</p>
+                            <p>Internal from Recheio within Jerónimo Martins Group (Confidential) </p>
                         </div>
 
                         <!-- Toggle Button -->
@@ -86,14 +86,13 @@
 
                 <!-- Project Content -->
                 <h2>Project Scope</h2>
-                <p>Develop a predictive model to automate classification of injury severity claims in the workplace for NYC's Workers Compensation Bank. Complete structured pipeline involving data exploration, cleaning, preprocessing, and feature selection. Build and evaluate classification models using cross-validation, confusion matrix analysis, and derived performance metrics.</p>
+                <p>The project aims to enhance customer segmentation and recommendation capabilities for retail clients. We addressed 89.49% missing client type data to build four distinct customer profiles. Based on these profiles, we designed three recommendation systems—Smart Basket, Did You Forget?, and Brand Substitution/Upselling—to improve product relevance. The expected outcome is to increase sales conversion and strengthen customer loyalty.</p>
 
                 <h2>Key Challenges</h2>
                 <ul>
-                    <li>Little context about Domain Knowledge</li>
-                    <li>Highly imbalanced classes</li>
-                    <li>Missing data in majority of features</li>
-                    <li>90% categorical features requiring special encoding</li>
+                    <li>Massive Data Gap: Imputing the missing ID Client Type was the foundational challenge, requiring a robust modelling approach</li>
+                    <li>Designing and implementing different recommendation strategies that cater to each client history</li>
+                    <li>Computational cost of Monte carlo simulation and ensuring reproducible method throught team and models used</li>
                 </ul>
 
                 <h2>Technical Approach</h2>
@@ -108,19 +107,20 @@
                         <tbody>
                             <tr>
                                 <td>Data Preparation</td>
-                                <td>SMOTE oversampling, Frequency Encoding</td>
+                                <td>Merging transaction, product, and client data;label encoding; handling class imbalance with SMOTE.</td>
                             </tr>
                             <tr>
                                 <td>Feature Engineering</td>
-                                <td>Time-based features, binary flags, category grouping</td>
+                                <td>client-product category purchase matrices; used ZIP code as a location proxy</td>
                             </tr>
                             <tr>
                                 <td>Model Selection</td>
-                                <td>Light GBM with custom class weights</td>
+                                <td>Imputation: Ensemble model (Soft Voting with Random Forest, XGBoost, Extra Trees). 
+                                    <p>Recommenders: Dice similarity for co-occurrence</p></td>
                             </tr>
                             <tr>
                                 <td>Evaluation</td>
-                                <td>F1-score macro, Precision, Confusion matrix</td>
+                                <td>Imputation:F1-score macro, Accuracy. Reccommender: Accuracy via Monte Carlo simulations</td>
                             </tr>
                         </tbody>
                     </table>
@@ -130,8 +130,18 @@
                 <div class="features">
                     <section>
                         <span class="icon solid major fa-chart-line"></span>
-                        <h3>74% Accuracy</h3>
-                        <p>F1-Score macro of 42% on imbalanced classes</p>
+                        <h3>63% Accuracy and F1-Score</h3>
+                        <p>Imputation of Client ID/p>
+                    </section>
+                    <section>
+                        <span class="icon solid major fa-puzzle-piece"></span>
+                        <h3>60% Monte Carlo Accuracy</h3>
+                        <p>"Did You Forget?" - Top-3 recommendations</p>"
+                    </section>
+                    <section>
+                        <span class="icon solid major fa-puzzle-piece"></span>
+                        <h3>44% Monte Carlo Accuracy</h3>
+                        <p>"Smart Basket" - Personalized Top-10 recommendations</p>"
                     </section>
                 </div>
 
@@ -140,17 +150,13 @@
                   Key Observations and Future Improvements
                 </h2>
                 <ul>
-                  <li>First Machine Learning project</li>
-                  <li>Few predictors led to best results</li>
-                  <li>Grid search required a broader parameter range to improve the search space.</li>   
+                  <li>The "Smart Basket" personalized model (43.5% accuracy) vastly outperformed the generic group-based model (8.7% accuracy)</li>
+                  <li>Integrate real-time stock levels and product pricing data to enable out-of-stock substitution and price-range filtering</li>   
                 </ul>
 
 
                 <!-- Project Links -->
-                <ul class="actions">
-                    <li><a href="assets/documents/report_injury.pdf" class="button icon solid fa-file-pdf">Full Report</a></li>
-                    <li><a href="#" class="button icon brands fa-github">View Code</a></li>
-                </ul>
+                <p>This project handles confidential data which cannot be disclosed. Therefore, code and report cannot be shared.</p>
             </div>
         </section>
     </div>
