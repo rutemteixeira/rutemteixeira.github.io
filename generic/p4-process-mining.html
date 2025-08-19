@@ -33,7 +33,7 @@
         <nav>
             <ul>
                 <li><a href="index.html">Return</a></li>
-                <li><a href="generic/p1-injury-claim.html" class="active">Project Details</a></li>
+                <li><a href="generic/p4-process-mining.html" class="active">Project Details</a></li>
             </ul>
         </nav>
     </header>
@@ -44,23 +44,23 @@
         <!-- Main -->
         <section id="main" class="wrapper style3 fade-up">
             <div class="inner">
-                <h1 class="major">Project ID: Injury Claim Severity Classification</h1>
-                <span class="image fit"><img src="images/pic01.jpg" alt="Project visualization" /></span>
+                <h1 class="major">Project ID: Patient Journey Process Mining</h1>
+                <span class="image fit"><img src="images/pic04.jpg" alt="Project visualization" /></span>
                 
                 <!-- Project Metadata -->
                 <div class="box alt">
                     <div class="row gtr-uniform">
                         <div class="col-4">
                             <h3><span class="icon solid fa-calendar"></span> Duration</h3>
-                            <p>2 months (2024)</p>
+                            <p>1 month (2025)</p>
                         </div>
                         <div class="col-4">
                             <h3><span class="icon solid fa-industry"></span> Industry</h3>
-                            <p>Insurance / Workers' Compensation</p>
+                            <p>Healthcare / Business Management</p>
                         </div>
                         <div class="col-4">
                           <h3><span class="icon solid fa-database"></span> Dataset</h3>
-                          <p>590,000+ rows, 33 columns <br> Data collected between 2020-2022</p>
+                          <p>1,190 appointments, 10 columns <br> Event log with sequential activity records</p>
                         </div>
 
                         <!-- Last 3 items (hidden by default) -->
@@ -70,11 +70,11 @@
                         </div>
                         <div class="col-4 toggle-content" style="display: none;">
                             <h3><span class="icon solid fa-cogs"></span> Skillset</h3>
-                            <p>Pandas, Python, Scikit-learn, ML Models, EDA</p>
+                            <p>Celonis, ETL, Data Visualization, Dashboarding, Throughput Time, Process discovery, Variant analysis</p>
                         </div>
                         <div class="col-4 toggle-content" style="display: none;">
                             <h3><span class="icon solid fa-university"></span> Data Source</h3>
-                            <p>Public for academic purpose - NYC Workers' Compensation Bank</p>
+                            <p>Internal operational systems of Saúde+ Health Center</p>
                         </div>
 
                         <!-- Toggle Button -->
@@ -86,14 +86,12 @@
 
                 <!-- Project Content -->
                 <h2>Project Scope</h2>
-                <p>Develop a predictive model to automate classification of injury severity claims in the workplace for NYC's Workers Compensation Bank. Complete structured pipeline involving data exploration, cleaning, preprocessing, and feature selection. Build and evaluate classification models using cross-validation, confusion matrix analysis, and derived performance metrics.</p>
+                <p> Analyze the end-to-end patient appointment process at Saúde+ Health Center to identify inefficiencies, understand patient behavior, and quantify key performance indicators like wait times, satisfaction, and cost. Using process mining in Celonis, the team reconstructed the "As-Is" process from event logs, mapped all patient journey variants, and built an interactive dashboard to provide actionable insights for improving operational efficiency and patient experience.</p>
 
                 <h2>Key Challenges</h2>
                 <ul>
-                    <li>Little context about Domain Knowledge</li>
-                    <li>Highly imbalanced classes</li>
-                    <li>Missing data in majority of features</li>
-                    <li>90% categorical features requiring special encoding</li>
+                    <li>Constraints of the Celonis Academic account limited advanced data transformations and enrichment</li>
+                    <li>Diagnosing the reason for low patient satisfaction without detailed motives for complaints</li>
                 </ul>
 
                 <h2>Technical Approach</h2>
@@ -107,42 +105,45 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Data Preparation</td>
-                                <td>SMOTE oversampling, Frequency Encoding</td>
+                                <td>Data Preparation: ETL</td>
+                                <td>Data integration in Celonis, deduplication of case tables, defining activity and case tables with keys and timestamps.</td>
                             </tr>
                             <tr>
                                 <td>Feature Engineering</td>
-                                <td>Time-based features, binary flags, category grouping</td>
+                                <td>limited due to academic account constraints. Focused on core process mining features: activity sequences, throughput time calculation.</td>
                             </tr>
                             <tr>
-                                <td>Model Selection</td>
-                                <td>Light GBM with custom class weights</td>
-                            </tr>
-                            <tr>
-                                <td>Evaluation</td>
-                                <td>F1-score macro, Precision, Confusion matrix</td>
+                                <td>Reporting/Dashboarding</td>
+                                <td>8-pages. Exploration by case, process and variant; Business overview; Patient segmentation; Regional trends and Time Duration Analysis</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
 
                 <h2>Results</h2>
-                <div class="features">
-                    <section>
-                        <span class="icon solid major fa-chart-line"></span>
-                        <h3>74% Accuracy</h3>
-                        <p>F1-Score macro of 42% on imbalanced classes</p>
-                    </section>
-                </div>
+        <div class="features">
+            <div class="metric"> <!-- Container for each metric -->
+                <span class="icon solid major fa-chart-line"></span>
+                <h3>Average patient satisfaction score: 3.59 / 5</h3>
+            </div>
+            <div class="metric">
+                <span class="icon solid major fa-clock"></span>
+                <h3>Average throughput time= 9 minutes</h3>
+            </div>
+            <div class="metric">
+                <span class="icon solid major fa-thumbs-down"></span> <!-- Fixed class: 'fa-thumb-down' -> 'fa-thumbs-down' -->
+                <h3>Complaint rate: 16% of cases</h3>
+            </div>
+        </div>
 
                 <h2 style="display: flex; align-items: center; gap: 0.5rem;">
                   <span class="icon solid fa-lightbulb fa-sm"></span> <!-- Added fa-sm -->
                   Key Observations and Future Improvements
                 </h2>
                 <ul>
-                  <li>First Machine Learning project</li>
-                  <li>Few predictors led to best results</li>
-                  <li>Grid search required a broader parameter range to improve the search space.</li>   
+                  <li>Implement more granular data logging (e.g., reasons for cancellations/complaints) to enable deeper analysis</li>
+                  <li>Investigate the high "Return Another Day" rate and patient complaints to address core service issues, not just time metrics.</li>
+                  <li>Patient satisfaction is low across all regions and segments, especially among insured patients and those aged 36-55, despite short recorded wait times.</li>   
                 </ul>
 
 
