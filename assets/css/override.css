@@ -1,22 +1,81 @@
-/* White background with electric blue and lime green theme */
+@import url("fontawesome-all.min.css");
+
+/* 
+   Hyperspace by HTML5 UP
+   Modified color palette for Rute's portfolio
+   Palette: Electric Blue (#007BFF), Lime Green (#32CD32), White (#FFFFFF)
+*/
+
+/* Root variables */
+:root {
+  --color-primary: #007BFF;   /* Electric Blue */
+  --color-accent: #32CD32;    /* Lime Green */
+  --color-bg: #FFFFFF;        /* White */
+  --color-fg: #007BFF;        /* Electric Blue for text */
+  --color-muted: rgba(0, 123, 255, 0.75); /* Softer electric blue */
+}
+
+/* Body */
 body {
-  background: #ffffff;
+  background: var(--color-bg);
+  color: var(--color-fg);
 }
 
-body, input, select, textarea {
-  color: #333333;
+/* Side Banner */
+#sidebar {
+  background: var(--color-primary);
+  color: #FFFFFF;
 }
 
-strong, b, h1, h2, h3, h4, h5, h6 {
-  color: #222222;
+/* Sidebar links */
+#sidebar a {
+  color: #FFFFFF;
+}
+#sidebar a:hover {
+  color: var(--color-accent);
 }
 
+/* Sections alternating backgrounds */
+section:nth-of-type(odd) {
+  background: var(--color-bg);   /* White */
+}
+section:nth-of-type(even) {
+  background: var(--color-accent); /* Lime Green */
+  color: #FFFFFF;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-primary);
+}
+
+/* Links */
 a {
-  border-bottom-color: rgba(0, 162, 255, 0.5);
+  color: var(--color-primary);
+  text-decoration: none;
 }
-
 a:hover {
-  color: #00a2ff;
+  color: var(--color-accent);
 }
 
-/* Add all the other overrides from above */
+/* Buttons */
+.button {
+  background: var(--color-primary);
+  color: #FFFFFF !important;
+  border: none;
+  border-radius: 0.3em;
+}
+.button:hover {
+  background: var(--color-accent);
+}
+
+/* Gradients where used */
+.gradient-bg {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  color: #FFFFFF;
+}
+
+/* Misc text adjustments */
+p, li, span {
+  color: var(--color-fg);
+}
