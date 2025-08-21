@@ -3245,7 +3245,7 @@ input, select, textarea {
 		}
 
 		.wrapper.style1-alt {
-			background-color: #493382;
+			background-color: #fbfa4a; #footer
 		}
 
 		.wrapper.style2 {
@@ -3762,7 +3762,7 @@ input, select, textarea {
 			}
 
 			#sidebar nav a:before {
-				background: #fbfa4a;
+				background: #252525;
 			}
 
 			#sidebar nav a:after {
