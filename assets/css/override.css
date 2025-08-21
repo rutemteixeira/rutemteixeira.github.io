@@ -3241,15 +3241,15 @@ input, select, textarea {
 		}
 
 		.wrapper.style1 {
-			background-color: #252525;
+			background-color: #545252;
 		}
 
 		.wrapper.style1-alt {
-			background-color: #252525; #footer
+			background-color: #545252; #footer
 		}
 
 		.wrapper.style2 {
-			background-color: #545252;
+			background-color: #252525;
 		}
 
 		.wrapper.style2-alt {
