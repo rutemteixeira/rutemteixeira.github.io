@@ -159,7 +159,7 @@ input, select, textarea {
 
 		a:hover {
 			border-bottom-color: transparent;
-			color: #ffffff;
+			color: #fbfa4a;
 		}
 
 	strong, b {
@@ -3245,11 +3245,11 @@ input, select, textarea {
 		}
 
 		.wrapper.style1-alt {
-			background-color: #fbfa4a; #footer
+			background-color: #252525; #footer
 		}
 
 		.wrapper.style2 {
-			background-color: #fbfa4a;
+			background-color: #545252;
 		}
 
 		.wrapper.style2-alt {
@@ -3378,7 +3378,7 @@ input, select, textarea {
 
 		#header > .title {
 			border: 0;
-			color: #ffffff;
+			color: #fbfa4a;
 			display: block;
 			font-size: 1.25em;
 			font-weight: bold;
@@ -3423,7 +3423,7 @@ input, select, textarea {
 						}
 
 						#header > nav > ul > li a.active {
-							color: #ffffff;
+							color: #fbfa4a;
 						}
 
 		@media screen and (max-width: 736px) {
@@ -3782,7 +3782,7 @@ input, select, textarea {
 			}
 
 			#sidebar nav a.active {
-				color: #ffffff;
+				color: #fbfa4a;
 			}
 
 				#sidebar nav a.active:after {
