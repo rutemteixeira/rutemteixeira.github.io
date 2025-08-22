@@ -1916,7 +1916,7 @@ input, select, textarea {
 		button.primary,
 		.button.primary {
 			background-color: #ffffff;
-			color: #e6e587 !important; #color fading in the actual photo
+			color: #312450 !important;
 		}
 
 			input[type="submit"].primary:after,
@@ -2357,7 +2357,7 @@ input, select, textarea {
 
 		select option {
 			color: #ffffff;
-			background: #e6e587; #color fading in the actual photo?
+			background: #312450;
 		}
 
 		select:focus::-ms-value {
@@ -2526,7 +2526,7 @@ input, select, textarea {
 			display: block;
 			background: #ffffff;
 			border-radius: 100%;
-			color: #e6e587; #change from purple
+			color: #312450;
 			text-align: center;
 			line-height: 2.5em;
 			margin: 0 0 1.3em 0;
