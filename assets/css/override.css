@@ -2869,7 +2869,7 @@ input, select, textarea {
 
 	header p {
 		color: rgba(255, 255, 255, 0.35);
-		position: relative;
+		position: fixed; #changed here
 		margin: 0 0 1.5em 0;
 	}
 
